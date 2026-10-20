@@ -1,0 +1,82 @@
+:root {
+  --frequencia: #126ae2;
+  --nota: #126ae2;
+  --prova: #126ae2;
+}
+
+/* Dentro do Shadow DOM, :host recebe as mesmas variáveis */
+:host {
+  --frequencia: #126ae2;
+  --nota: #126ae2;
+  --prova: #126ae2;
+  --nota-vermelho: #d32f2f;
+  --nota-laranja: #f57c00;
+  --nota-verde: #2e7d32;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.comp-aula {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  max-width: 420px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.titulo_aula {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lables {
+  display: flex;
+}
+
+.lable-prova,
+.lable-frequencia,
+.lable-nota {
+  background-color: var(--prova);
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.lable-prova {
+  display: inline-block;
+}
+
+.lable-frequencia {
+  background-color: var(--frequencia);
+}
+
+.lable-nota {
+  background-color: var(--nota);
+}
+
+/* Melhoria: cor da nota de acordo com o valor */
+.lable-nota.nota-vermelho {
+  background-color: var(--nota-vermelho);
+}
+
+.lable-nota.nota-laranja {
+  background-color: var(--nota-laranja);
+}
+
+.lable-nota.nota-verde {
+  background-color: var(--nota-verde);
+}
+
+.p_lable {
+  font-size: 13px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
